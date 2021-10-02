@@ -19,6 +19,10 @@ body {
   scroll-behavior: smooth;
   font-size: 62.25%;
   overflow-x: hidden;
+  background: rgb(18,30,56);
+  background: linear-gradient(90deg, rgba(18,30,56,1) 0%, rgba(17,66,163,1) 100%);
+  background-size: 400% 400%;
+  animation: background 20s ease-in-out infinite;
 }
 
 body {
@@ -49,7 +53,39 @@ body {
   white-space: nowrap !important;
 }
 
+/* section */
+.main {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+}
+
+.section {
+  height: 100%;
+  @include flex(row, center, center);
+  background: $whiteColor;
+  border-top-left-radius: 0;
+  border-top-right-radius: 10rem;
+  border-bottom-left-radius: 10rem;
+  border-bottom-right-radius: 0;
+  box-shadow: 6px 6px 0 #5ac1eb;
+}
+
+// .section__wrapper {
+
+// }
+
 /* animations */
+@keyframes background {
+  0% {
+    background-position: 0 50%;
+  } 50% {
+    background-position: 100% 50%;
+  } 100% {
+    background-position: 0 50%;
+  }
+}
+
 @keyframes btnAnimation {
   0% {
     width: 0;
