@@ -74,6 +74,7 @@ body {
 .section__wrapper {
   height: 100%;
   text-align: center;
+  padding: 0 1.5rem;
   @include flex(column, center, center);
   position: relative;
   z-index: 0;
@@ -87,6 +88,10 @@ body {
 
   &--end {
     font-size: 2.5rem;
+  }
+
+  a {
+    color: rgb(18,30,56);
   }
 
   @media screen and (min-width: $mediumWidth) {
@@ -151,6 +156,7 @@ body {
 }
 
 .layer {
+  display: none;
   position: relative;
 
   &--left {
@@ -171,6 +177,10 @@ body {
     bottom: 0;
     right: 0;
     opacity: 0.2;
+  }
+
+  @media screen and (min-width: $largeWidth) {
+    display: block;
   }
 }
 
